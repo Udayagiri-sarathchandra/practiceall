@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableTask</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        var switchfun = () => {
+            var stab = document.getElementById('switchtab');
+            var selt = document.getElementById('select_table').value;
+            switch (selt) {
+                case "A": stab.className = "table text-center h4 text-light"
+                    break;
+
+                case "B": stab.className = "table table-dark table-striped h4"
+                    break;
+
+                case "C": stab.className = "table table-success text-center table-hover h5 "
+                    break;
+
+                case "D": stab.className = "table table-danger table-bordered h5"
+                    break;
+
+                default:
+                    stab.className = "table text-light";
+                    break;
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url(bgbg2.jpg);
+        }
+
+        button {
+            border-radius: 50%;
+            font-style: oblique;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        select {
+            background-color: grey;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #select_theme {
+            background-image: url(bgbg2.jpg)
+        }
+
+        thead {
+            font-size: xx-large;
+        }
+    </style>
+
+</head>
+
+<body class="bg-info container">
+
+    <div id="select_theme" class="text-center">
+        <select class="sel_class" id="select_table">
+            <option>Themes</option>
+            <option value="A">default</option>
+            <option value="B">dark mode</option>
+            <option value="C">success mode</option>
+            <option value="D">danger mode</option>
+        </select>
+
+        <button class="m-5 p-2" onclick="switchfun()">Apply Theme</button>
+    </div>
+    <br><br><br><br><br>
+    <table class="table" id="switchtab">
+        <thead>
+            <tr>
+                <th scope="col">Emp Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Blood group</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">001</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">002</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">003</th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@fat</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
